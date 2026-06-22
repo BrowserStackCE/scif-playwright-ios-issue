@@ -1,0 +1,31 @@
+{
+  "name": "node-js-playwright-browserstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sample-test": "npx browserstack-node-sdk playwright test --config=./playwright.config.js",
+    "sample-percy-test": "npx percy exec -- browserstack-node-sdk playwright test --config=./playwright.config.js",
+    "sample-test-ios": "npx playwright test --config=./playwright.config.js --project='safari@iPhone 15:17@browserstack-mobile'",
+    "sample-local-test": "npx browserstack-node-sdk playwright test --config=./playwright.local.config.js",
+    "postinstall": "npm update browserstack-node-sdk",
+    "local-run": "npx playwright test --config=./playwright.config.js --project=Chrome --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "@playwright/test": "1.57.0",
+    "@types/node": "^20.11.17",
+    "browserstack-node-sdk": "1.56.3",
+    "cucumber-html-reporter": "^6.0.0",
+    "playwright": "^1.57.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@percy/cli": "^1.31.14",
+    "@percy/playwright": "^1.1.0"
+  }
+}
