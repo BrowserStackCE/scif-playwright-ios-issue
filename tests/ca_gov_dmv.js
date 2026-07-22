@@ -20,7 +20,7 @@ test("Navigate ca.gov Departments to DMV and verify homepage", async ({
   const dept= await page.locator("//a[text()='View all departments']")
   await dept.click();
 
-  const edd = page.locator("//a[@href='/departments/229/']");
+  const edd = page.locator("//a[@href='/departments/150/']");
   await edd.click();
 
 
@@ -30,7 +30,7 @@ test("Navigate ca.gov Departments to DMV and verify homepage", async ({
   //   .first();
   // await expect(dmvDeptLink).toBeVisible({ timeout: 15000 });
   // await dmvDeptLink.click();
-  await expect(page).toHaveURL(/\/departments\/229\/?/);
+  await expect(page).toHaveURL(/\/departments\/150\/?/);
 
   // 4. Click the button that opens the official DMV website
   const departmentWebsiteBtn = page.getByRole("link", {
@@ -58,6 +58,6 @@ test("Navigate ca.gov Departments to DMV and verify homepage", async ({
   const popularLinks = page.locator("//span[text()='Popular links']");
   await expect(page).toBeVisible();
 
-  
+
 
 });
