@@ -5,136 +5,18 @@ buildName: browserstack build
 buildIdentifier: '#${BUILD_NUMBER}' # Supports strings along with either/both ${expression}
 framework: playwright
 source: java-playwright-browserstack:sample-sdk:v1.0
-platforms:
-  # - browserName: chrome
-  #   osVersion: 15.0
-  #   deviceName: Samsung Galaxy S25
-  #   playwrightConfigOptions:
-  #     use:      
-  #       hasTouch: true
-    # - os: OS X
-    #   osVersion: Tahoe
-    #   browserName: Chrome
-    #   browserVersion: 146.0
-    #   goog:chromeOptions:
-    #     args:
-    #       - --start-maximized
-    #   playwrightConfigOptions:
-    #     use:      
-    #       viewport: null
-          #deviceScaleFactor: undefined    
-    # - os: Windows
-    #   osVersion: 11
-    #   browserName: Chrome
-    #   browserVersion: 143.0
-      # chromeOptions:
-      #   args:
-      #     - --start-maximized
-      # playwrightConfigOptions:
-      #   use:      
-      #     viewport: null
-          #deviceScaleFactor: undefined
-
-  # - deviceName: iPhone 17
-  #   osVersion: 26
-  #   browserName: Safari
-  #   playwrightConfigOptions:
-  #     use:      
-  #       hasTouch: true
-  # - browserName: safari
-  #   osVersion: 15.0
-  #   deviceName: iPhone 13
-  #   playwrightConfigOptions:
-  #     use:      
-  #       hasTouch: true
+platforms:  
   - browserName: safari
-    osVersion: 16
-    deviceName: iPhone 14 Pro Max
-    playwrightConfigOptions:
-      use:      
-        hasTouch: true
-        #trace: on
-  # - browserName: safari
-  #   osVersion: 26.0
-  #   deviceName: iPhone 15 Pro Max   
-  #   playwrightConfigOptions:
-  #     use:      
-  #       hasTouch: true
+    osVersion: 26.5
+    deviceName: iPhone 17 Pro
   # - browserName: chrome
-  #   osVersion: 10.0
-  #   deviceName: Samsung Galaxy S20
-  #   playwrightConfigOptions:
-  #     use:      
-  #       hasTouch: true
-  # - browserName: chrome
-  #   osVersion: 13.0
-  #   deviceName: Samsung Galaxy Tab S9
-  #   playwrightConfigOptions:
-  #     use:      
-  #       hasTouch: true
-  # - browserName: chrome
-  #   osVersion: 13.0
-  #   deviceName: Google Pixel 7     
-  #   playwrightConfigOptions:
-  #     use:      
-  #       hasTouch: true
-      #deviceOrientation: portrait
-    # - browserName: playwright-webkit
-    #   os: OS X
-    #   osVersion: Ventura
-    #   browserVersion: 26.0  
-    #   resolution: 1920X1080
-    #   playwrightConfigOptions:
-    #     use:              
-    #       viewport:
-    #         width: 1920
-    #         height: 1080
-      # playwrightConfigOptions:
-      #   use:      
-      #     viewport: {width: 1920, height: 1080}        
-      #     launchOptions:
-      #       args:
-      #         - --start-fullscreen
-    # - browserName: playwright-firefox
-    #   os: OS X
-    #   osVersion: Ventura
-    #   browserVersion: 142.0   
-    #   playwrightConfigOptions:
-    #     use:      
-    #       viewport: {width: 1920, height: 1080}   
-
-    # - os: Windows
-    #   osVersion: 11
-    #   browserName: playwright-firefox
-    #   browserVersion: 142.0      
-    #   playwrightConfigOptions:
-    #     use:      
-    #       viewport: {width: 1920, height: 1080}   
-    # - browserName: edge
-    #   os: Windows
-    #   osVersion: 11
-    #   browserVersion: 143.0    
-    #   chromeOptions:
-    #     args:
-    #       - --start-maximized
-    #   playwrightConfigOptions:
-    #     use:      
-    #       viewport: null       
-
-#selfHeal: true
-#aiAuthoring: true
-parallelsPerPlatform: 1
-browserstackLocal: false # <boolean> (Default false)
+  #   os: Windows
+  #   osVersion: 11
+  #   browserVersion: latest  
   
-debug: false # <boolean> # Set to true if you need screenshots for every selenium command ran
-networkLogs: false # <boolean> Set to true to enable HAR logs capturing
-consoleLogs: errors # <string> Remote browser's console debug levels to be printed (Default: errors)
-#geoLocation: FR
-#browserstackAutomation: false
-accessibility: false
-# accessibilityOptions:
-#     wcagVersion: wcag21aaa # Default: wcag21aa
-#     includeIssueType: 
-#         bestPractice: true # Default: false
-#         needsReview: true # Default: true
-#         experimental: true # Default: true
+parallelsPerPlatform: 1
+browserstackLocal: false
+  
+debug: false
+networkLogs: true
+consoleLogs: errors

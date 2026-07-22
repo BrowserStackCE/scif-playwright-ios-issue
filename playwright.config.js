@@ -2,7 +2,7 @@
 import {devices} from '@playwright/test'
 const config = {
   testDir: './tests',
-  testMatch: ['**/tests/scif_certificate_stability.js'],
+  testMatch: ['**/tests/ca_gov_dmv.js'],
 
   /* Maximum time one test can run for. */
   timeout: 300 * 1000,
